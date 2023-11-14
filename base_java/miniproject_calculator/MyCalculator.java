@@ -128,6 +128,7 @@ public class MyCalculator {
                     System.out.println("입력값이 잘못되었습니다.\n다시 입력해주세요.");
                 }
             }
+            sc.close();
         }
     }
 }
