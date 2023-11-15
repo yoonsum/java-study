@@ -6,4 +6,5 @@
 - https://www.acmicpc.net/
 
 ## base_java
-- java 기본 문법 study(mini프로젝트)
+- java 기본 문법 study
+- mini 프로젝트
