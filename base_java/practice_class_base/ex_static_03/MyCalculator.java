@@ -1,4 +1,4 @@
-package base_java.practice_class_base.ex_static_01;
+package base_java.practice_class_base.ex_static_03;
 
 public class MyCalculator {
     public static int adder(int n1, int n2) {

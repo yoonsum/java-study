@@ -1,4 +1,4 @@
-package base_java.practice_class_base.ex_static_01;
+package base_java.practice_class_base.ex_static_02;
 
 import java.util.Random;
 
