@@ -14,11 +14,16 @@ public class Baekjoon2581 {
         int m = Integer.parseInt(br.readLine());
         int n = Integer.parseInt(br.readLine());
 
-        int sum = 0;
+        long sum = 0;
         int min = 0;
-        if (m != 1) {
-            for (int i = m; i <= n; i++) {
-                boolean flag = false;
+
+        for (int i = m; i <= n; i++) {
+            boolean flag = false;
+            if (i == 1) {
+                flag = false;
+            } else if (i == 2 || i == 3) {
+                flag = true;
+            } else {
                 for (int j = 2; j * j <= i; j++) {
                     if (j * j == i) {
                         flag = false;
@@ -30,19 +35,19 @@ public class Baekjoon2581 {
                         flag = true;
                     }
                 }
-                if (flag) {
-                    if (min == 0) {
-                        min = i;
-                    }
-                    sum += i;
+            }
+            if (flag) {
+                if (min == 0) {
+                    min = i;
                 }
+                sum += i;
             }
         }
 
         if (sum == 0) {
             bw.write(Integer.toString(-1));
         } else {
-            bw.write(Integer.toString(sum) + "\n");
+            bw.write(Long.toString(sum) + "\n");
             bw.write(Integer.toString(min));
         }
 
