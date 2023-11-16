@@ -17,17 +17,8 @@ public class Baekjoon2869 {
         int B = Integer.parseInt(st.nextToken());
         int V = Integer.parseInt(st.nextToken());
 
-        int move = 0;
-        int day = 0;
-        while (true) {
-            move += A;
-            day++;
-            if (move >= V) {
-                break;
-            } else {
-                move -= B;
-            }
-        }
+        int day = (int) Math.ceil((V - A) / (double) (A - B)) + 1;
+
         bw.write(Integer.toString(day));
         bw.flush();
         bw.close();
