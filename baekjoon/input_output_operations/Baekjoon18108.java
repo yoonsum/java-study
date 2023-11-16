@@ -6,18 +6,14 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Beakjoon2588 {
+public class Baekjoon18108 {
     public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int value1 = Integer.parseInt(br.readLine());
-        int value2 = Integer.parseInt(br.readLine());
+        int bulgi_year = Integer.parseInt(br.readLine());
 
-        bw.write(Integer.toString(value1 * (value2 % 10)) + "\n");
-        bw.write(Integer.toString(value1 * (value2 % 100 / 10)) + "\n");
-        bw.write(Integer.toString(value1 * (value2 / 100)) + "\n");
-        bw.write(Integer.toString(value1 * value2) + "\n");
+        bw.write(Integer.toString(bulgi_year - 543));
 
         bw.flush();
         bw.close();

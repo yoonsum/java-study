@@ -5,15 +5,18 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
+import java.util.StringTokenizer;
 
-public class Beakjoon10926 {
+public class Baekjoon1008 {
     public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        String inputID = br.readLine();
+        double A = Double.parseDouble(st.nextToken());
+        int B = Integer.parseInt(st.nextToken());
 
-        bw.write(inputID + "??!");
+        bw.write(Double.toString(A / B));
 
         bw.flush();
         bw.close();

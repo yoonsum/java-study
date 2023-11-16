@@ -7,23 +7,23 @@ import java.io.OutputStreamWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-public class Beakjoon10430 {
+public class Baekjoon11382 {
     public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int A = Integer.parseInt(st.nextToken());
-        int B = Integer.parseInt(st.nextToken());
-        int C = Integer.parseInt(st.nextToken());
+        long sum = 0L;
+        int len = st.countTokens();
+        for (int i = 0; i < len; i++) {
+            sum += Long.parseLong(st.nextToken());
+        }
 
-        bw.write(Integer.toString((A + B) % C) + "\n");
-        bw.write(Integer.toString(((A % C) + (B % C)) % C) + "\n");
-        bw.write(Integer.toString((A * B) % C) + "\n");
-        bw.write(Integer.toString(((A % C) * (B % C)) % C) + "\n");
+        bw.write(Long.toString(sum));
 
         bw.flush();
         bw.close();
         br.close();
     }
+
 }
