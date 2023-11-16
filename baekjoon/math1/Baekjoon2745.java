@@ -15,17 +15,17 @@ public class Baekjoon2745 {
 
         String n = st.nextToken();
         int b = Integer.parseInt(st.nextToken());
-        int num = 0;
+        long num = 0L;
 
         for (int i = 0; i < n.length(); i++) {
-            if ((n.charAt(i) - 'A') > 0) {
-                num += ((int) (n.charAt(i) - 'A' + 10) * Math.pow(b, n.length() - i - 1));
+            if ('A' <= n.charAt(i) && n.charAt(i) <= 'Z') {
+                num += ((n.charAt(i) - 'A' + 10) * Math.pow(b, n.length() - i - 1));
             } else {
-                num += ((int) n.charAt(i) * Math.pow(b, n.length() - i - 1));
+                num += ((n.charAt(i) - '0') * Math.pow(b, n.length() - i - 1));
             }
         }
 
-        bw.write(Integer.toString(num));
+        bw.write(Long.toString(num));
         bw.flush();
         bw.close();
         br.close();
