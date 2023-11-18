@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
-import java.lang.StringBuffer;
 
 public class Baekjoon11005 {
     public static void main(String[] args) throws IOException {
@@ -30,7 +29,7 @@ public class Baekjoon11005 {
             }
             n = n / b;
         }
-        StringBuffer sb = new StringBuffer(num_value);
+        StringBuilder sb = new StringBuilder(num_value);
 
         bw.write(sb.reverse().toString());
 

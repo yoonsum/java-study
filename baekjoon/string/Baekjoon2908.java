@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
-import java.lang.StringBuffer;
 
 public class Baekjoon2908 {
     public static void main(String[] args) throws IOException {
@@ -14,8 +13,8 @@ public class Baekjoon2908 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int num1 = Integer.parseInt(new StringBuffer(st.nextToken()).reverse().toString());
-        int num2 = Integer.parseInt(new StringBuffer(st.nextToken()).reverse().toString());
+        int num1 = Integer.parseInt(new StringBuilder(st.nextToken()).reverse().toString());
+        int num2 = Integer.parseInt(new StringBuilder(st.nextToken()).reverse().toString());
 
         if (num1 > num2) {
             bw.write(Integer.toString(num1));
