@@ -12,7 +12,7 @@ public class Baekjoon14425 {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        Set<String> str = new TreeSet<String>();
+        Set<String> str = new HashSet<String>();
         for (int i = 0; i < n; i++) {
             str.add(br.readLine());
         }
