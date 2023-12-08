@@ -8,9 +8,9 @@ public interface TodoRepository {
 
     void editTodo(TodoItem item);
 
-    void deleteTodo(int id);
+    void deleteTodo(long id);
 
     List<TodoItem> getAllTodos();
 
-    TodoItem getTodoById(int id);
+    TodoItem getTodoById(long id);
 }
