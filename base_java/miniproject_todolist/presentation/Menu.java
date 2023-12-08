@@ -2,10 +2,14 @@ package base_java.miniproject_todolist.presentation;
 
 import java.util.*;
 
+import base_java.miniproject_todolist.service.TodoService;
+
 public class Menu {
+    private TodoService todoService;
     private Scanner sc;
 
-    public Menu() {
+    public Menu(TodoService todoService) {
+        this.todoService = todoService;
         this.sc = new Scanner(System.in);
     }
 
@@ -58,6 +62,7 @@ public class Menu {
                 System.exit(0);
                 break;
             case 1:
+
                 break;
             case 2:
                 break;
