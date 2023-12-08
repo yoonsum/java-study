@@ -9,6 +9,12 @@ public class Menu {
         this.sc = new Scanner(System.in);
     }
 
+    /**
+     * 입력받은 메뉴 데이터 유효성 검증
+     * 
+     * @param input
+     * @return
+     */
     private boolean checkMenu(String input) {
         if (input.length() > 1) {
             return false;
@@ -21,6 +27,9 @@ public class Menu {
         return true;
     }
 
+    /**
+     * 메뉴 목록 보기 및 메뉴 입력 받기
+     */
     public void displayMenu() {
         System.out.println("===== To Do List Application Menu =====");
         System.out.println("1. 전체 할 일 목록 보기");
