@@ -38,7 +38,7 @@ public class Menu {
         System.out.println("4. 할 일 삭제하기");
         System.out.println("5. 할 일 완료하기");
         System.out.println("6. 날짜별로 정렬해서 목록 보기");
-        System.out.println("7. 로 정렬해서 목록 보기");
+        System.out.println("7. 할 일 정렬해서 목록 보기");
         System.out.println("0. 종료");
         System.out.println("=======================================");
 
