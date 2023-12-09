@@ -9,8 +9,6 @@ public class Main {
         TodoService todoService = new TodoService(new InMemoryTodoRepository());
         Menu menu = new Menu(todoService);
 
-        while (true) {
-            menu.displayMenu();
-        }
+        menu.displayMenu();
     }
 }
