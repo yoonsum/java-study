@@ -1,40 +1,48 @@
 package baekjoon.recursion;
 
 import java.io.*;
+import java.util.Arrays;
 
 public class Baekjoon2447 {
-    public static char[][] recursion(char[][] base) {
-        System.out.println(base.length); // 3
-        int len = base.length;
-
-        char[][] pattern = new char[len][len];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-
-            }
-        }
-
-        if(){
-            recursion(pattern);
-        }
-        return pattern;
-    }
-
-    // 짜파게티
-    // 인성탕면2개
-    // 밀가루?
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
 
         int n = Integer.parseInt(br.readLine());
+
         char[][] board = new char[n][n];
-        char[][] base = {
-                { '*', '*', '*' },
-                { '*', ' ', '*' },
-                { '*', '*', '*' } };
+        for (int i = 0; i < n; i++) {
+            Arrays.fill(board[i], '*');
+        }
 
-        char[][] pattern = recursion(base);
+        int count = n / 3;
 
+        while (count >= 1) {
+            for (int start_x = count; start_x < n; start_x += (count * 3)) {
+                for (int start_y = count; start_y < n; start_y += (count * 3)) {
+
+                    for (int i = start_x; i < start_x + count; i++) {
+                        for (int j = start_y; j < start_y + count; j++) {
+                            board[i][j] = ' ';
+                        }
+                    }
+                }
+            }
+
+            count /= 3;
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                sb.append(board[i][j]);
+            }
+            sb.append("\n");
+        }
+
+        bw.write(sb.toString());
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
