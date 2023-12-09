@@ -35,7 +35,7 @@ public class Menu {
      * 메뉴 목록 보기 및 메뉴 입력 받기
      */
     public void displayMenu() {
-        System.out.println("===== To Do List Application Menu =====");
+        System.out.println("\n===== To Do List Application Menu =====");
         System.out.println("1. 전체 할 일 목록 보기");
         System.out.println("2. 할 일 추가하기");
         System.out.println("3. 할 일 수정하기");
@@ -46,39 +46,41 @@ public class Menu {
         System.out.println("0. 종료");
         System.out.println("=======================================");
 
+        System.out.print("메뉴를 입력하세요 : ");
         String input = sc.nextLine();
-        int selectedMenu;
 
         if (!checkMenu(input)) {
             System.out.println("입력값이 잘못되었습니다. 메뉴룰 다시 입력해주세요");
-            return;
+        } else {
+            int selectedMenu = input.charAt(0) - '0';
+
+            switch (selectedMenu) {
+                case 0:
+                    System.out.println("프로그램을 종료합니다.");
+                    System.exit(0);
+                    break;
+                case 1:
+                    new ShowAllTodoListHandler(todoService).handle();
+                    break;
+                case 2:
+                    new AddTodoHandler(todoService, sc).handle();
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                default:
+                    System.out.println("입력값이 잘못되었습니다. 메뉴를 다시 입력해주세요.");
+                    break;
+            }
         }
 
-        selectedMenu = input.charAt(0) - '0';
-
-        switch (selectedMenu) {
-            case 0:
-                System.out.println("프로그램을 종료합니다.");
-                System.exit(0);
-                break;
-            case 1:
-
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            default:
-                System.out.println("입력값이 잘못되었습니다. 메뉴를 다시 입력해주세요.");
-                break;
-        }
+        displayMenu();
     }
 }
