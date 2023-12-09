@@ -18,7 +18,7 @@ public class Baekjoon11729 {
         // 1 -> 3
         sb.append(from).append(" ").append(to).append("\n");
         // 2 -> 3
-        recursion(num - 1, tmp, to, from);
+        recursion(num - 1, tmp, from, to);
     }
 
     public static void main(String[] args) throws IOException {
